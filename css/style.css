@@ -1,0 +1,62 @@
+.nav-link{
+    font-size: 1.8rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    border-right: .3rem;
+}
+
+.nav-item{
+    list-style: none;
+    vertical-align: auto;
+    display: inline-block;
+    box-shadow: inset .3rem;
+    margin: .3rem 1rem .3rem .8rem;
+}
+.h1, .h2, .h3, h1, h2, h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-right: 50rem;
+  margin-left: 0;
+}
+.navbar{
+    background-color: rgb(67, 221, 201);
+    text-align:end;
+    display: block;
+    align-items:center;
+    align-content: center;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(65, 53, 53);
+  font-weight: 600;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+  box-shadow: .25rem .25rem .25rem .25rem rgb(82, 36, 190,.3);
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: #1f9dcf;
+  box-shadow: .1rem .1rem .1rem .1rem rgb(82, 36, 190,.3);
+}
+
+.container{
+    max-width: 80%;
+}
+
+.center-form{
+    display:flex;
+    justify-content: center;
+}
+
+.table{
+  margin-top: 3rem;
+}
+
+
