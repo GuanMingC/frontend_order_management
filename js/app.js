@@ -55,18 +55,18 @@ form.addEventListener("submit", function(e){
     const data = {};
     payload.forEach((value, key) => (data[key] = value));
     // Post the payload using Fetch:
-    const response=fetch('http://localhost:8080/api/order/postorder', {
+    console.log(data);
+    fetch('http://localhost:8080/api/order/postorder', {
     method: 'POST',
     credentials: 'same-origin',
     headers:{
       'Content-Type': 'application/json'
     },
-    body: data,
-    //body: JSON.stringify(data),
+    // body: data,
+    body: JSON.stringify(data),
     referrerPolicy: 'no-referrer',
     mode: 'cors'
-    });
-    //.then(res => res.json())
+    }).then(res => console.log(res));
     //.then(data => console.log(data))
 });}
 else{
