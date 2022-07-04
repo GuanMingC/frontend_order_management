@@ -44,8 +44,36 @@ async function funcName() {
   var data = await response.json();
 }
 
+function send(){
 const form = document.getElementById("form1");
-//form.addEventListener("submit", sub);
+if(form){
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+    // Create payload as new FormData object:
+    const payload = new FormData(form);
+    console.log(payload);
+    const data = {};
+    payload.forEach((value, key) => (data[key] = value));
+    // Post the payload using Fetch:
+    const response=fetch('http://localhost:8080/api/order/postorder', {
+    method: 'POST',
+    credentials: 'same-origin',
+    headers:{
+      'Content-Type': 'application/json'
+    },
+    body: data,
+    //body: JSON.stringify(data),
+    referrerPolicy: 'no-referrer',
+    mode: 'cors'
+    });
+    //.then(res => res.json())
+    //.then(data => console.log(data))
+});}
+else{
+  console.log("gg");
+}
+}
+
 
 async function getapi() {
   var url = "http://localhost:8080/api/order/getorders";

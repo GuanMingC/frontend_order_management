@@ -37,22 +37,23 @@
           <a class="nav-link" href="index.html">Create Order</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">List Orders</a>
+          <a class="nav-link" href="list.html">List Orders</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">View Order</a>
+          <a class="nav-link" href="view.html">View Order</a>
         </li>
       </ul>
     </nav>
 
     <div class="center-form">
-      <form id="form1" action="#" method="get">
+      <form id="form1" action="#" method="POST">
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
           <input
             type="text"
             class="form-control"
             id="name"
+            name="name"
             required
             th:field="*{name}"
           />
@@ -135,9 +136,8 @@
             </tr>
           </tbody>
         </table>
-        <button type="submit" onclick="submitBTN()" class="btn btn-primary">
-          Submit
-        </button>
+        <button type="submit" onclick="send()" value="Submit" class="btn btn-primary">Sumbit</button>
+          
       </form>
     </div>
   </body>
