@@ -34,13 +34,17 @@
                 <h4 class="card-title">List of Orders</h1>
                     <div>
                         <div class="d-flex w-30 float-right ">
-                            <input id="searchQuery" class="form-control" type="number" value="filter by id">
-                            <button id="searchButton" class="btn btn-secondary ml-2">Search</button>
+                            <input id="searchQuery" class="form-control" type="text" placeholder="filter by name">
+                            <button id="searchButton" onclick="search()" class="btn btn-secondary ml-2">Search</button>
                         </div>
+                        <br>
+                        <button id="populateButton" onclick="populate()" class="btn btn-secondary ml-2">Populate Table</button>
+                        <button id="sortButtonASC" onclick="sortASC()" class="btn btn-secondary ml-2">Sort Table (Ascending)</button>
+                        <button id="sortButtonDSC" onclick="sortDSC()" class="btn btn-secondary ml-2">Sort Table (Descending)</button>
                         <table id="ordersTable" class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th>#</th>
+                                    <th>ID</th>
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Product Name</th>

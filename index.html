@@ -60,7 +60,7 @@
         </div>
         <br />
         <div class="mb-3">
-          <label for="exampelInputEmail1" class="form-label"
+          <label for="email" class="form-label"
             >Email address</label
           >
           <input
@@ -74,25 +74,38 @@
             Order information will be sent.
           </div>
         </div>
+        <div id="rep">
+        <div>
+        <label for="order_product" class="form-label">Product name</label>
         <input
-            type="text"
-            class="form-control"
-            id="ProductName"
-            name="order_product"
-            required
-          />
-          <input
-            type="number"
-            class="form-control"
-            id="ProductPrice"
-            name="order_price"
-            required
-                  min="0"
-                  value="0"
-                  step="any"
-          />
-        <button onclick="send()" value="Submit" class="btn btn-primary">Sumbit</button>
-          
+          type="text"
+          class="form-control"
+          id="order_product0"
+          name="order_product0"
+          required
+        />
+      </div>
+      <div>
+        <label for="order_price" class="form-label">Product price</label>
+        <input
+          type="number"
+          class="form-control"
+          id="order_price0"
+          name="order_price0"
+          required
+          min="0"
+          value="0"
+          step="any"
+        />
+        </div>
+      </div>
+        <br>
+        <button onclick="send()" value="Submit" class="btn btn-primary">
+          Sumbit
+        </button>
+        <button onclick="add_more_fields()" class="btn btn-primary">
+          + Add more order
+        </button>
       </form>
     </div>
   </body>
