@@ -66,77 +66,32 @@
           <input
             type="email"
             class="form-control"
-            id="exampleInputEmail1"
+            id="email"
+            name="email"
             required
           />
           <div id="emailHelp" class="form-text">
             Order information will be sent.
           </div>
         </div>
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Product Name</th>
-              <th scope="col">Product Price</th>
-              <th scope="col">Quantity of Purchase</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Hp Laptop</td>
-              <td>1999</td>
-              <td>
-                <input
-                  type="number"
-                  name="p1qop"
-                  id="p1qop"
+        <input
+            type="text"
+            class="form-control"
+            id="ProductName"
+            name="order_product"
+            required
+          />
+          <input
+            type="number"
+            class="form-control"
+            id="ProductPrice"
+            name="order_price"
+            required
                   min="0"
                   value="0"
-                  placeholder="Enter quatity here..."
-                />
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Mac</td>
-              <td>2500</td>
-              <td>
-                <input
-                  type="number"
-                  name="p2qop"
-                  id="p2qop"
-                  min="0"
-                  value="0"
-                  placeholder="Enter quatity here..."
-                />
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Dell Laptop</td>
-              <td>1500</td>
-              <td>
-                <input
-                  type="number"
-                  name="p3qop"
-                  id="p3qop"
-                  min="0"
-                  value="0"
-                  placeholder="Enter quatity here..."
-                />
-              </td>
-            </tr>
-            <tr>
-              <td colspan="3">
-                <button onclick="cal()" id="calculate">Calculate</button>
-              </td>
-              <td colspan="2" id="display"></td>
-            </tr>
-          </tbody>
-        </table>
-        <button type="submit" onclick="send()" value="Submit" class="btn btn-primary">Sumbit</button>
+                  step="any"
+          />
+        <button onclick="send()" value="Submit" class="btn btn-primary">Sumbit</button>
           
       </form>
     </div>
