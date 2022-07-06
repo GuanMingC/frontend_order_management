@@ -1,6 +1,6 @@
-const get_orders = "http://localhost:8080/api/order/getorders";
-const post_order = "http://localhost:8080/api/order/postorder";
-const get_order = "http://localhost:8080/api/order/getorderdetail";
+const get_orders = "http://10.3.187.94:7001/Order_Management-0.0.1-SNAPSHOT/api/order/getorders";
+const post_order = "http://10.3.187.94:7001/Order_Management-0.0.1-SNAPSHOT/api/order/postorder";
+const get_order = "http://10.3.187.94:7001/Order_Management-0.0.1-SNAPSHOT/api/order/getorderdetail";
 var counter=0;
 
 //https://github.com/mdeveloper20/javascript-employee-project/blob/master/controller.js
@@ -97,28 +97,32 @@ function send() {
       console.log(payload);
       const data = {};
       //in construction
-      arr_product=[];
-      arr_price=[];
-      var count_product=0;
-      var count_price=0;
-      for(let i=0;i<=counter;i++){
-        if (payload.key!=("order_product"+count_product) || payload.key!=("order_price"+count_price)){
-          data[payload.key] = payload.value;
-        }
-        else if (payload.key==("order_product"+count_product)){
-          arr_product.push(payload.value);
-          count_product+=1;
-        }
-        else{
-          arr_price.push(payload.value);
-          count_price+=1;
-        }
-      }
+
+      // arr_product=[];
+      // arr_price=[];
+      // var count_product=0;
+      // var count_price=0;
+      // for(let i=0;i<=counter;i++){
+      //   if (payload.key!=("order_product"+count_product) || payload.key!=("order_price"+count_price)){
+      //     data[payload.key] = payload.value;
+      //   }
+      //   else if (payload.key==("order_pice"+count_price)){
+      //     arr_product.push(payload.value);
+      //     count_product+=1;
+      //   }
+      //   else{
+      //     arr_price.push(payload.value);
+      //     count_price+=1;
+      //   }
+      // }
+      // data["order_list"]=arr_product;
+      // data["order_price"]=arr_price;
+      
       //end of construction
       payload.forEach((value, key) => (data[key] = value));
       // Post the payload using Fetch:
       console.log(data);
-      fetch("http://localhost:8080/api/order/postorder", {
+      fetch(post_order, {
         method: "POST",
         credentials: "same-origin",
         headers: {
